@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verified - Relay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 28rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .icon-wrapper {
+            width: 4rem;
+            height: 4rem;
+            background: #ecfdf5;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon {
+            width: 2.25rem;
+            height: 2.25rem;
+            color: #059669;
+        }
+
+        .heading {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.025em;
+        }
+
+        .message {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.625;
+            margin-bottom: 2rem;
+        }
+
+        .button {
+            display: inline-block;
+            width: 100%;
+            background: #0f172a;
+            color: white;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.875rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: #1e293b;
+        }
+
+        .button:focus {
+            outline: 2px solid #0f172a;
+            outline-offset: 2px;
+        }
+
+        .close-text {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .footer-text {
+            color: #cbd5e1;
+            font-size: 0.75rem;
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                padding: 2rem;
+            }
+
+            .heading {
+                font-size: 1.5rem;
+            }
+
+            .message {
+                font-size: 0.9375rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="icon-wrapper">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+
+            <h1 class="heading">Email Verified</h1>
+
+            <p class="message">
+                Your email has been successfully verified. You can now sign in to Relay and start improving your productivity.
+            </p>
+
+            <a href="relay://" class="button">Open the Relay App</a>
+
+            <p class="close-text">You can safely close this window</p>
+        </div>
+
+        <div class="footer">
+            <p class="footer-text">Relay © <span id="year"></span></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
