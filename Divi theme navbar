@@ -1,0 +1,302 @@
+/* ============================================
+   DIVI MODERN FLOATING NAVIGATION BAR
+   Enhanced Dark Theme with Smooth Animations
+   ============================================ */
+
+/* Main Header Floating Style */
+#main-header {
+  position: fixed !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: calc(100% - 40px) !important;
+  max-width: 900px !important;
+  z-index: 99999 !important;
+
+  /* Dark translucent rounded background with glassmorphism */
+  background: rgba(15, 15, 15, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+
+  /* Rounded corners */
+  border-radius: 36px !important;
+
+  /* Enhanced shadow for depth */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+              0 0 0 1px rgba(255, 255, 255, 0.05) inset !important;
+
+  /* Smooth transitions */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+  /* Subtle border for definition */
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  
+  /* Animation on load */
+  animation: fadeInDown 0.6s ease-out !important;
+}
+
+/* Scroll Enhancement - Stronger effect when scrolled */
+.et-fixed-header#main-header {
+  background: rgba(12, 12, 12, 0.85) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
+              0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
+  transform: translateX(-50%) scale(0.98) !important;
+}
+
+/* Inner container adjustments */
+#main-header .container {
+  padding: 16px 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  min-height: 64px !important;
+}
+
+/* Normalize Divi top navigation spacing and center items */
+#et-top-navigation {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Ensure top-menu container aligns with logo */
+#top-menu-nav {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Ensure main header inner containers are aligned */
+#main-header .et_pb_row {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Logo adjustments */
+#main-header .logo_container {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
+#main-header #logo {
+  max-height: 36px !important;
+  display: block !important;
+  vertical-align: middle !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  filter: brightness(1) !important;
+}
+
+#main-header #logo:hover {
+  transform: scale(1.05) !important;
+  filter: brightness(1.1) !important;
+}
+
+/* Menu styling */
+#top-menu {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  line-height: 1 !important;
+}
+
+#top-menu li {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+#top-menu > li > a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  padding: 12px 20px !important;
+  border-radius: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
+/* Hover effect with background and scale */
+#top-menu > li > a:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  transform: scale(1.05) translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Active menu item */
+#top-menu > li.current-menu-item > a {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+/* Mobile menu button */
+.mobile_menu_bar {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+  padding: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.mobile_menu_bar:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  transform: scale(1.05) !important;
+}
+
+.mobile_menu_bar:before {
+  color: #ffffff !important;
+}
+
+/* Dropdown menus with enhanced styling */
+#top-menu .sub-menu {
+  background: rgba(20, 20, 20, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
+              0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  margin-top: 10px !important;
+  padding: 8px !important;
+  animation: fadeInScale 0.3s ease-out !important;
+  overflow: hidden !important;
+}
+
+#top-menu .sub-menu li {
+  margin: 4px 0 !important;
+}
+
+#top-menu .sub-menu a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 10px 14px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+  display: block !important;
+}
+
+#top-menu .sub-menu a:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  transform: translateX(4px) !important;
+  padding-left: 18px !important;
+}
+
+/* Add top padding to page content */
+#page-container {
+  padding-top: 120px !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 980px) {
+  #main-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    border-radius: 0 0 24px 24px !important;
+    background: rgba(15, 15, 15, 0.92) !important;
+    max-width: none !important;
+  }
+
+  .et-fixed-header#main-header {
+    transform: none !important;
+  }
+
+  #page-container {
+    padding-top: 80px !important;
+  }
+
+  #main-header .container {
+    padding: 12px 20px !important;
+  }
+  
+  /* Mobile menu improvements */
+  .mobile_nav {
+    background: rgba(20, 20, 20, 0.95) !important;
+    backdrop-filter: blur(16px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .mobile_nav .menu-item a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 14px 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  .mobile_nav .menu-item a:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #main-header {
+    width: 100% !important;
+    top: 0 !important;
+    border-radius: 0 0 20px 20px !important;
+  }
+  
+  #main-header .container {
+    padding: 10px 16px !important;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Optional: Smooth scroll behavior for anchor links */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* Optional: Add subtle glow effect on hover (can be removed if too much) */
+#top-menu > li > a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#top-menu > li > a:hover::before {
+  opacity: 1;
+}
